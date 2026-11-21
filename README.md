@@ -47,10 +47,12 @@
 # 1) 미니앱 웹 산출물을 만들고 (ait build가 묶기 전 폴더)
 npm run build
 
-# 2) 검사
-npx github:Mrbaeksang/apps-in-toss-rejections dist
-# 또는 이 레포를 받아서
-node scripts/scan.mjs ../my-miniapp/dist
+# 2) 검사 (npm 12부터 GitHub 패키지는 --allow-git이 필요해요)
+npx -y --allow-git=all github:Mrbaeksang/apps-in-toss-rejections dist
+
+# 또는 받아서 실행 (Node 20+, 의존성 없음)
+git clone https://github.com/Mrbaeksang/apps-in-toss-rejections
+node apps-in-toss-rejections/scripts/scan.mjs ../my-miniapp/dist
 ```
 
 ```text
@@ -133,7 +135,8 @@ Toss's official [`toss/apps-in-toss-harness`](https://github.com/toss/apps-in-to
 - [`skills/apps-in-toss-rejections/`](skills/apps-in-toss-rejections/SKILL.md): an agent skill for Claude Code, Codex and others
 
 ```bash
-npx github:Mrbaeksang/apps-in-toss-rejections dist
+npx -y --allow-git=all github:Mrbaeksang/apps-in-toss-rejections dist
+# or: git clone … && node apps-in-toss-rejections/scripts/scan.mjs dist
 ```
 
 Unofficial and not affiliated with Viva Republica (Toss). The official guides are the source of truth.

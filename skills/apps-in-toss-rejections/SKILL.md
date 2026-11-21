@@ -32,7 +32,7 @@ plugin is installed, run its `launch` skill first; this skill covers the gaps li
 
 1. **Build.** Find the web output folder the mini-app packs (often `dist/`; with SDK 3.x it is the folder
    `webBundleDir` in `apps-in-toss.config.ts` names). Build it with the project's script.
-2. **Scan.** `node <this repo>/scripts/scan.mjs <output-folder>` (or `npx github:Mrbaeksang/apps-in-toss-rejections <folder>`).
+2. **Scan.** `node <this repo>/scripts/scan.mjs <output-folder>` (or `npx -y --allow-git=all github:Mrbaeksang/apps-in-toss-rejections <folder>`).
    - For each `blocking` line, find where the string comes from in source (search the matched host or name).
      The usual cause is a shared module that imports another platform's payment/ad/login code. Fix by injecting
      that code only from the platform entry that needs it, or delete it if unused. Rebuild and rescan until 0.
