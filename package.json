@@ -1,0 +1,11 @@
+{
+  "name": "apps-in-toss-rejections",
+  "version": "0.1.0",
+  "description": "Real Apps in Toss (앱인토스) review rejections and a zero-dependency bundle scan for what the official launch scan does not cover.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "ait-rejections-scan": "scripts/scan.mjs" },
+  "scripts": { "test": "node --test test/scan.test.mjs", "scan": "node scripts/scan.mjs" },
+  "engines": { "node": ">=20" },
+  "keywords": ["apps-in-toss", "앱인토스", "toss", "mini-app", "review", "checklist", "claude-code", "agent-skill", "codex"]
+}

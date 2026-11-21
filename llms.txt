@@ -1,0 +1,11 @@
+# apps-in-toss-rejections
+
+> Real Apps in Toss (앱인토스) mini-app review rejections, the review items the official toss/apps-in-toss-harness launch scan does not automate, a zero-dependency scanner for built bundles, and an agent skill.
+
+- [README](README.md): what this is and how to run it
+- [Agent procedure](skills/apps-in-toss-rejections/SKILL.md): step-by-step for coding agents
+- [Gaps](GAPS.md): 14 review items with how to verify each
+- [Rejection cases](cases/README.md): real rejection messages, causes, fixes
+- [Scanner](scripts/scan.mjs): `node scripts/scan.mjs <built-web-folder>`
+- Official checklist: https://developers-apps-in-toss.toss.im/checklist/app-nongame
+- Official UI/UX guide: https://developers-apps-in-toss.toss.im/design/consumer-ux-guide
